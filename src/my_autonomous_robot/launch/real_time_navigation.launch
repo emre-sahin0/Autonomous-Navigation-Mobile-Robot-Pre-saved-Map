@@ -1,0 +1,16 @@
+<launch>
+  <!-- SLAM -->
+  <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
+    <arg name="slam_methods" value="gmapping"/>
+  </include>
+
+  <!-- Navigation -->
+  <group ns="navigation">
+    <include file="$(find turtlebot3_navigation)/launch/move_base.launch"/>
+  </group>
+
+  <!-- RViz -->
+  <node pkg="rviz" type="rviz" name="rviz_real_time_navigation" args="-d $(find turtlebot3_navigation)/rviz/turtlebot3_navigation.rviz"/>
+
+</launch>
+

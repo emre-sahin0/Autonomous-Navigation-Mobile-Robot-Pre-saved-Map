@@ -1,0 +1,7 @@
+Displays:
+  - Name: Map
+    Type: OccupancyGrid
+    Topic: /map
+  - Name: LaserScan
+    Type: LaserScan
+    Topic: /scan
